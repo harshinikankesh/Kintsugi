@@ -4,162 +4,168 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Why You Are Amazing</title>
+<title>Why You're Amazing</title>
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-min-height:100vh;
-overflow-x:hidden;
-font-family:'Trebuchet MS',sans-serif;
-background:
-linear-gradient(to bottom,
-#050816 0%,
-#0b1026 35%,
-#111c44 65%,
-#1d2951 100%);
-color:white;
-position:relative;
+    min-height:100vh;
+    overflow-x:hidden;
+    font-family:'Trebuchet MS', sans-serif;
+    color:white;
+    background:
+    linear-gradient(to bottom,
+    #020617 0%,
+    #0f172a 35%,
+    #111827 65%,
+    #1e293b 100%);
+    position:relative;
 }
 
 /* Moon */
 
 .moon{
-position:absolute;
-top:80px;
-right:90px;
-width:90px;
-height:90px;
-border-radius:50%;
-background:#dbeafe;
-opacity:0.55;
-box-shadow:
-0 0 20px rgba(255,255,255,0.15);
+    position:absolute;
+    top:60px;
+    right:80px;
+    width:110px;
+    height:110px;
+    background:#dbeafe;
+    border-radius:50%;
+    box-shadow:
+    0 0 40px rgba(191,219,254,0.9),
+    0 0 80px rgba(191,219,254,0.4);
 }
 
 /* Stars */
 
 .star{
-position:absolute;
-width:2px;
-height:2px;
-background:white;
-border-radius:50%;
-animation:twinkle 3s infinite;
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 3s infinite;
 }
 
 @keyframes twinkle{
-0%{opacity:0.3;}
-50%{opacity:1;}
-100%{opacity:0.3;}
+    0%{opacity:0.2;}
+    50%{opacity:1;}
+    100%{opacity:0.2;}
 }
 
 /* Floating icons */
 
-.float{
-position:absolute;
-font-size:24px;
-opacity:0.75;
-animation:float 6s ease-in-out infinite;
+.floating{
+    position:absolute;
+    font-size:22px;
+    opacity:0.7;
+    animation:float 7s infinite ease-in-out;
 }
 
 @keyframes float{
-0%{transform:translateY(0px);}
-50%{transform:translateY(-15px);}
-100%{transform:translateY(0px);}
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-18px);}
+    100%{transform:translateY(0px);}
 }
 
-/* Main container */
+/* Main Container */
 
 .container{
-position:relative;
-z-index:2;
-padding:70px 20px 120px;
-text-align:center;
+    position:relative;
+    z-index:2;
+    text-align:center;
+    padding:50px 20px 120px;
 }
 
 h1{
-font-size:3rem;
-line-height:1.3;
-margin-bottom:20px;
-color:#0f172a;
-background:rgba(255,255,255,0.75);
-display:inline-block;
-padding:15px 35px;
-border-radius:28px;
-box-shadow:
-0 0 25px rgba(255,255,255,0.12);
+    font-size:3rem;
+    color:#bfdbfe;
+    margin-bottom:15px;
+    text-shadow:0 0 20px rgba(191,219,254,0.4);
 }
 
 .subtitle{
-margin-top:15px;
-margin-bottom:50px;
-font-size:1.2rem;
-color:#dbeafe;
-line-height:1.8;
+    color:#cbd5e1;
+    font-size:1.15rem;
+    margin-bottom:45px;
+    line-height:1.8;
 }
 
 /* Buttons */
 
 .buttons{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:22px;
-max-width:1300px;
-margin:auto;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+    max-width:1300px;
+    margin:auto;
 }
 
 .reason{
-width:230px;
-padding:22px;
-border-radius:30px;
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(14px);
-border:1px solid rgba(255,255,255,0.15);
-cursor:pointer;
-transition:0.35s;
-font-size:1rem;
-color:#dbeafe;
-box-shadow:
-0 0 20px rgba(255,255,255,0.04);
+    width:240px;
+    padding:18px 20px;
+    border-radius:22px;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.12);
+    backdrop-filter:blur(10px);
+    color:#dbeafe;
+    cursor:pointer;
+    transition:0.3s;
+    font-size:1rem;
+    box-shadow:0 0 15px rgba(59,130,246,0.08);
 }
 
 .reason:hover{
-transform:translateY(-8px) scale(1.04);
-background:rgba(96,165,250,0.15);
-box-shadow:
-0 0 30px rgba(96,165,250,0.25);
+    transform:translateY(-6px) scale(1.03);
+    background:rgba(59,130,246,0.16);
+    box-shadow:0 0 25px rgba(59,130,246,0.3);
 }
 
-/* Popup */
+/* Message Box */
 
-.popup{
-margin:60px auto;
-max-width:920px;
-padding:38px;
-border-radius:35px;
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(15px);
-border:1px solid rgba(255,255,255,0.18);
-line-height:2;
-font-size:1.1rem;
-color:#f8fafc;
-min-height:220px;
-box-shadow:
-0 0 30px rgba(255,255,255,0.06);
+.message{
+    margin:55px auto;
+    max-width:900px;
+    min-height:220px;
+    padding:35px;
+    border-radius:28px;
+    background:rgba(255,255,255,0.07);
+    border:1px solid rgba(255,255,255,0.12);
+    backdrop-filter:blur(12px);
+    line-height:2;
+    color:#eff6ff;
+    font-size:1.1rem;
+    text-align:left;
+    box-shadow:0 0 25px rgba(59,130,246,0.12);
 }
 
 footer{
-margin-top:50px;
-color:#cbd5e1;
-font-size:0.95rem;
+    margin-top:50px;
+    color:#94a3b8;
+    font-size:0.95rem;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#0f172a;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#3b82f6;
+    border-radius:20px;
 }
 
 </style>
@@ -169,36 +175,32 @@ font-size:0.95rem;
 
 <div class="moon"></div>
 
-<!-- Floating icons -->
+<!-- Floating Icons -->
 
-<div class="float" style="top:12%;left:8%;">🎸</div>
-<div class="float" style="top:18%;left:18%;">💙</div>
-<div class="float" style="top:16%;left:80%;">🎵</div>
-<div class="float" style="top:34%;left:88%;">⚽</div>
-<div class="float" style="top:52%;left:7%;">🏍️</div>
-<div class="float" style="top:62%;left:90%;">✨</div>
-<div class="float" style="top:42%;left:15%;">🎶</div>
-<div class="float" style="top:25%;left:60%;">💫</div>
+<div class="floating" style="top:10%;left:8%;">💙</div>
+<div class="floating" style="top:18%;left:82%;">🎸</div>
+<div class="floating" style="top:30%;left:12%;">✨</div>
+<div class="floating" style="top:20%;left:55%;">🌙</div>
+<div class="floating" style="top:50%;left:88%;">🎵</div>
+<div class="floating" style="top:65%;left:10%;">💫</div>
 
 <div class="container">
 
-<h1>
-Why You Are A Successful<br>
-And Amazing Human?
-</h1>
+<h1>Why You Are Amazing</h1>
 
 <div class="subtitle">
-The reasons why you make the world better with your existence &lt;3
+Why you are an amazing and a successful person💙
 </div>
 
 <div class="buttons" id="buttons"></div>
 
-<div class="popup" id="popup">
-Click one of the reasons ✨
+<div class="message" id="message">
+Click any button to reveal a reason ✨
 </div>
 
 <footer>
-Built with admiration, galaxies, music, football nights, and feelings.
+Made with admiration, stardust, music, and way too many confused feelings.
+P.S : You are not even close to being a failure - you are the maximum success that a man can get to !
 </footer>
 
 </div>
@@ -208,90 +210,193 @@ Built with admiration, galaxies, music, football nights, and feelings.
 const reasons = [
 
 {
-title:"🎸 Why You're Different",
-text:"You somehow manage to be intelligent, emotionally aware, calm, passionate, funny, and deeply caring all at once. That combination is unbelievably rare."
+title:"Why You'll Succeed",
+text:"You succeed because you never stop learning. You don’t just dream about things — you study them, build them, break them, fix them, and understand them deeply. The way you think, your discipline, your curiosity, and your ability to keep going even when things are hard… that’s the kind of mindset successful people are made of."
 },
 
 {
-title:"⚽ Football Nights",
-text:"Watching football with you would probably become one of those little memories that stays forever. The excitement, the chaos, the joy — it all feels warmer with you."
+title:"Why You're Different",
+text:"You’re different because you care deeply while still being incredibly intelligent. Most people are either emotionally aware or technically skilled — but you somehow manage to be both."
 },
 
 {
-title:"🏍️ Ride With You",
-text:"You feel like those late night rides under streetlights with music softly playing in the background — peaceful, exciting, and unforgettable."
+title:"Why I Admire You",
+text:"I admire the way your mind works. The passion you have for what you love, the effort you put into improving yourself, and the calm confidence you carry."
 },
 
 {
-title:"🎵 Your Music Taste",
-text:"The fact that you love progressive metal already says so much about your mind. Complex, emotional, creative, layered — just like you."
+title:"Why You'll Build Big Things",
+text:"Because you don’t think small. Your creativity mixed with technical skill is powerful — and one day the things you build are going to impact a lot of people."
 },
 
 {
-title:"🎸 Misha Mansoor Energy",
-text:"You have that same experimental, passionate energy. The kind of person who keeps improving because creating things matters deeply to you."
+title:"Why You're a Great Cybersecurity Engineer",
+text:"You naturally notice patterns, risks, loopholes, and possibilities that most people miss."
 },
 
 {
-title:"☀️ Bottle Of Sunshine",
-text:"You genuinely make spaces feel lighter. Even your presence changes the mood around people in the softest way."
+title:"Why You Matter",
+text:"You make people feel safe, understood, and valued. Your presence has this calm strength to it.You love everyone and every living being !"
 },
 
 {
-title:"💙 Why I Admire You",
-text:"The way your mind works is beautiful. The way you think deeply, care deeply, and still keep moving forward quietly is inspiring."
+title:"Your Kindness",
+text:"Your kindness is soft but powerful. The world genuinely becomes lighter around people like you. Ypu bring light to lives of people !"
 },
 
 {
-title:"✨ Reasons To Live",
-text:"To hear new music. To ride under the night sky. To watch football. To build things. To laugh again. To exist in a world where someone somewhere is grateful you exist."
+title:"Your Resilience",
+text:"No matter how hard things get, you always find a way to keep moving forward... You are just like your mother in this <3"
 },
 
 {
-title:"🌙 Your Presence",
-text:"There’s something calming about you. Even silence around you doesn’t feel empty — it feels safe."
+title:"Your Patience",
+text:"You have this rare ability to stay calm even during difficult moments."
 },
 
 {
-title:"💫 Why You'll Succeed",
-text:"Because you genuinely care about learning and becoming better. People with minds like yours eventually build extraordinary things."
+title:"Your Efforts",
+text:"People don’t always see how much effort you put into everything, but I do."
 },
 
 {
-title:"🎶 Your Soul",
-text:"You feel like a song that slowly becomes someone’s favorite after they truly listen carefully."
+title:"Your Unconditional Love",
+text:"The way you care for people is genuine and wholehearted."
 },
 
 {
-title:"🌌 The Truth About You",
-text:"You are deeply lovable in ways you probably don’t even realize. The future version of you is going to be proud that you kept going."
+title:"Your Warm Heart",
+text:"You make people feel welcomed just by being yourself."
+},
+
+{
+title:"Your Intelligence",
+text:"Your intelligence isn’t just about knowledge. It’s the way you observe things, solve problems, and understand people."
+},
+
+{
+title:"Your Presence",
+text:"There’s something calming about your presence. Even simple conversations with you feel meaningful."
+},
+
+{
+title:"Your Determination",
+text:"Once you care about something, you give it your all. You don’t quit easily."
+},
+
+{
+title:"Your Loyalty",
+text:"In a world where people leave easily, your loyalty is rare and precious."
+},
+
+{
+title:"Your Smile",
+text:"Your smile has this way of making everything feel lighter. It’s warm, genuine, and unforgettable."
+},
+
+{
+title:"Your Passion",
+text:"The way you talk about the things you love is beautiful. Your passion makes you come alive."
+},
+
+{
+title:"Your Music Taste",
+text:"Your taste in music says so much about you. Deep, emotional, creative, and powerful."
+},
+
+{
+title:"Your Creativity",
+text:"You don’t just think differently — you create differently."
+},
+
+{
+title:"Your Strength",
+text:"You’ve handled things silently that would have broken other people."
+},
+
+{
+title:"Your Energy",
+text:"You have this energy that people naturally gravitate toward."
+},
+
+{
+title:"Your Ambition",
+text:"You dream bigger, think deeper, and keep aiming higher."
+},
+
+{
+title:"Your Heart",
+text:"No matter how logical you are, your heart is incredibly soft underneath it all."
+},
+
+{
+title:"Your Calmness",
+text:"You bring calm into situations without even trying."
+},
+
+{
+title:"Your Voice",
+text:"There’s something comforting about your voice. Listening to you always feels nice."
+},
+
+{
+title:"Your Confidence",
+text:"You carry yourself with this quiet confidence that’s incredibly attractive."
+},
+
+{
+title:"Your Humor",
+text:"You make people laugh in the most unexpected ways."
+},
+
+{
+title:"Your Authenticity",
+text:"You stay true to yourself, and that authenticity makes you unforgettable."
+},
+
+{
+title:"Your Future",
+text:"You have so much potential ahead of you. One day all your hard work will make perfect sense."
+},
+
+{
+title:"Your Soul",
+text:"There’s something beautiful about your soul. Strong but gentle. Intelligent but kind."
+},
+
+{
+title:"Everything About You",
+text:"Your heart. Your mind. Your effort. Your dreams. Your kindness. Your strength. Every little piece of you adds up to someone unforgettable."
+},
+
+{
+title:"Reasons To Live",
+text:"Because your story is still being written. Because there are songs you haven’t heard yet, roads you haven’t ridden yet, dreams you haven’t achieved yet, and moments of happiness waiting for you in places you haven’t even reached yet. Because the people who love you would never find another version of you. Because your future self deserves the chance to experience peace, success, laughter, late-night drives, victories, music that gives you goosebumps, sunsets that heal something inside you, and the life you’ve worked so hard for. Because even on the days you feel tired, overwhelmed, or lost, your existence still matters deeply. The world is genuinely better with you in it."
 }
 
 ];
 
-const buttonsDiv=document.getElementById("buttons");
-const popup=document.getElementById("popup");
+const buttonsDiv = document.getElementById("buttons");
+const message = document.getElementById("message");
 
-reasons.forEach(reason=>{
+reasons.forEach(reason => {
 
-const button=document.createElement("div");
+const button = document.createElement("div");
 
-button.className="reason";
+button.className = "reason";
 
-button.innerHTML=reason.title;
+button.innerText = reason.title;
 
-button.onclick=()=>{
+button.onclick = () => {
 
-popup.innerHTML=`
-<h2 style="
-margin-bottom:20px;
-color:#93c5fd;
-font-size:1.7rem;
-">
+message.innerHTML = `
+<h2 style="margin-bottom:18px;color:#93c5fd;">
 ${reason.title}
 </h2>
 
+<p>
 ${reason.text}
+</p>
 `;
 
 };
@@ -302,7 +407,7 @@ buttonsDiv.appendChild(button);
 
 /* Stars */
 
-for(let i=0;i<220;i++){
+for(let i=0;i<170;i++){
 
 let star=document.createElement("div");
 
