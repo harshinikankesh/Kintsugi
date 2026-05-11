@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For You</title>
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+    background:linear-gradient(to bottom,#0f172a,#1e293b);
+    overflow:hidden;
+    font-family:Arial, sans-serif;
+    color:white;
+    text-align:center;
+}
+
+h1{
+    margin-top:40px;
+    font-size:3rem;
+    color:#ffd6e7;
+}
+
+.subtitle{
+    color:#cbd5e1;
+    margin-bottom:40px;
+    font-size:1.2rem;
+    padding:0 20px;
+}
+
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
+}
+
+.word{
+    background:rgba(255,255,255,0.1);
+    padding:15px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
+    backdrop-filter:blur(5px);
+    font-size:1rem;
+}
+
+.word:hover{
+    transform:scale(1.1);
+    background:#ff4d88;
+}
+
+.messageBox{
+    margin-top:40px;
+    padding:20px;
+    max-width:700px;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:1.3rem;
+    color:#ffe4ef;
+    line-height:1.8;
+}
+
+.stars{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 3s infinite;
+}
+
+@keyframes twinkle{
+    0%{opacity:0.2;}
+    50%{opacity:1;}
+    100%{opacity:0.2;}
+}
+
+footer{
+    position:absolute;
+    bottom:20px;
+    width:100%;
+    color:#94a3b8;
+    font-size:0.9rem;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Things I Love About You ✨</h1>
+
+<div class="subtitle">
+You once asked me why I love you.<br>
+So I built this.
+</div>
+
+<div class="container">
+
+<div class="word" onclick="showMessage('You make ordinary moments feel magical.')">
+Your Presence
+</div>
+
+<div class="word" onclick="showMessage('Your laugh feels like my favorite song.')">
+Your Laugh
+</div>
+
+<div class="word" onclick="showMessage('You listen in a way that makes me feel understood.')">
+The Way You Listen
+</div>
+
+<div class="word" onclick="showMessage('Even silence feels peaceful with you.')">
+Your Calmness
+</div>
+
+<div class="word" onclick="showMessage('You somehow became my comfort place without trying.')">
+You
+</div>
+
+<div class="word" onclick="showMessage('Every conversation with you stays in my head longer than it should.')">
+Our Conversations
+</div>
+
+<div class="word" onclick="showMessage('You make me feel safe being fully myself.')">
+The Way I Feel Around You
+</div>
+
+<div class="word" onclick="showMessage('Somehow you turned into one of my favorite parts of life.')">
+Us
+</div>
+
+</div>
+
+<div class="messageBox" id="message">
+Click on something ✨
+</div>
+
+<footer>
+Made with way too many feelings.
+</footer>
+
+<script>
+
+function showMessage(text){
+    document.getElementById("message").innerHTML = text;
+}
+
+for(let i=0;i<120;i++){
+
+    let star=document.createElement("div");
+    star.classList.add("stars");
+
+    star.style.left=Math.random()*100+"vw";
+    star.style.top=Math.random()*100+"vh";
+
+    star.style.animationDuration=(Math.random()*3+2)+"s";
+
+    document.body.appendChild(star);
+}
+
+</script>
+
+</body>
+</html>
