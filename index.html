@@ -4,178 +4,190 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Why You're Amazing</title>
+<title>Why You Are Amazing</title>
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    min-height:100vh;
-    overflow-x:hidden;
-    font-family: 'Trebuchet MS', sans-serif;
-    color:white;
-    background:
-    linear-gradient(to bottom,
-    #050816 0%,
-    #0b1026 40%,
-    #111827 70%,
-    #1f2937 100%);
-    position:relative;
+font-family:'Trebuchet MS',sans-serif;
+overflow-x:hidden;
+background:
+linear-gradient(to bottom,
+#060816 0%,
+#0a1030 35%,
+#111c44 65%,
+#1b2c52 100%);
+min-height:100vh;
+color:white;
+position:relative;
 }
 
 /* Moon */
 
 .moon{
-    position:absolute;
-    top:70px;
-    right:90px;
-    width:120px;
-    height:120px;
-    background:#fff8dc;
-    border-radius:50%;
-    box-shadow:
-    0 0 40px #fff8dc,
-    0 0 80px rgba(255,255,255,0.5);
+position:absolute;
+top:80px;
+right:90px;
+width:90px;
+height:90px;
+border-radius:50%;
+background:#e7e9ff;
+opacity:0.7;
+box-shadow:
+0 0 25px rgba(255,255,255,0.25);
 }
 
 /* Stars */
 
 .star{
-    position:absolute;
-    width:3px;
-    height:3px;
-    background:white;
-    border-radius:50%;
-    animation: twinkle 3s infinite;
+position:absolute;
+width:2px;
+height:2px;
+background:white;
+border-radius:50%;
+animation:twinkle 3s infinite;
 }
 
 @keyframes twinkle{
-    0%{opacity:0.2;}
-    50%{opacity:1;}
-    100%{opacity:0.2;}
+0%{opacity:0.3;}
+50%{opacity:1;}
+100%{opacity:0.3;}
 }
 
-/* Floating aesthetic icons */
+/* Floating icons */
 
-.floating{
-    position:absolute;
-    font-size:22px;
-    opacity:0.7;
-    animation: float 8s infinite ease-in-out;
+.float{
+position:absolute;
+font-size:24px;
+opacity:0.75;
+animation:float 6s ease-in-out infinite;
 }
 
 @keyframes float{
-    0%{transform:translateY(0px);}
-    50%{transform:translateY(-20px);}
-    100%{transform:translateY(0px);}
+0%{transform:translateY(0px);}
+50%{transform:translateY(-18px);}
+100%{transform:translateY(0px);}
 }
 
 /* Content */
 
 .container{
-    position:relative;
-    z-index:2;
-    text-align:center;
-    padding:60px 20px 150px;
+position:relative;
+z-index:2;
+text-align:center;
+padding:60px 20px 180px;
 }
 
 h1{
-    font-size:3rem;
-    color:#ffe4ef;
-    margin-bottom:15px;
-    text-shadow:0 0 20px rgba(255,255,255,0.3);
+font-size:3rem;
+line-height:1.3;
+margin-bottom:15px;
+color:#162447;
+text-shadow:
+0 0 12px rgba(255,255,255,0.25);
+background:rgba(255,255,255,0.7);
+display:inline-block;
+padding:12px 30px;
+border-radius:25px;
 }
 
 .subtitle{
-    font-size:1.2rem;
-    color:#cbd5e1;
-    margin-bottom:50px;
-    line-height:1.8;
+margin-top:15px;
+margin-bottom:50px;
+font-size:1.2rem;
+color:#dbeafe;
+line-height:1.8;
 }
 
 /* Buttons */
 
 .buttons{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
-    max-width:1200px;
-    margin:auto;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:22px;
+max-width:1300px;
+margin:auto;
 }
 
 .reason{
-    padding:18px 24px;
-    border-radius:25px;
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(10px);
-    border:1px solid rgba(255,255,255,0.15);
-    cursor:pointer;
-    transition:0.3s;
-    width:250px;
-    color:#fff;
-    font-size:1rem;
-    box-shadow:0 0 20px rgba(255,255,255,0.05);
+width:220px;
+padding:22px;
+border-radius:28px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,0.15);
+cursor:pointer;
+transition:0.35s;
+color:#dbeafe;
+font-size:1rem;
+box-shadow:
+0 0 18px rgba(255,255,255,0.05);
 }
 
 .reason:hover{
-    transform:translateY(-6px) scale(1.03);
-    background:rgba(255,182,193,0.18);
-    box-shadow:0 0 30px rgba(255,182,193,0.3);
+transform:translateY(-8px) scale(1.04);
+background:rgba(96,165,250,0.15);
+box-shadow:
+0 0 30px rgba(96,165,250,0.3);
 }
 
-/* Message box */
+/* Popup */
 
-.message{
-    margin:60px auto;
-    max-width:850px;
-    padding:35px;
-    border-radius:30px;
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(12px);
-    border:1px solid rgba(255,255,255,0.15);
-    line-height:2;
-    font-size:1.1rem;
-    color:#ffeef5;
-    min-height:180px;
+.popup{
+margin:60px auto;
+max-width:900px;
+padding:35px;
+border-radius:35px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,0.18);
+line-height:2;
+font-size:1.1rem;
+color:#f8fafc;
+min-height:220px;
+box-shadow:
+0 0 30px rgba(255,255,255,0.08);
 }
 
 /* Grass */
 
 .grass{
-    position:fixed;
-    bottom:0;
-    left:0;
-    width:100%;
-    height:120px;
-    background:linear-gradient(to top,#14532d,#166534);
-    z-index:1;
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+height:140px;
+background:
+linear-gradient(to top,#14532d,#166534);
+z-index:1;
 }
 
 /* Flowers */
 
 .flower{
-    position:absolute;
-    bottom:70px;
-    font-size:25px;
-    animation: sway 4s infinite ease-in-out;
+position:absolute;
+bottom:70px;
+font-size:26px;
+animation:sway 4s ease-in-out infinite;
 }
 
 @keyframes sway{
-    0%{transform:rotate(0deg);}
-    50%{transform:rotate(4deg);}
-    100%{transform:rotate(0deg);}
+0%{transform:rotate(0deg);}
+50%{transform:rotate(4deg);}
+100%{transform:rotate(0deg);}
 }
 
 footer{
-    margin-top:50px;
-    color:#94a3b8;
-    font-size:0.9rem;
+margin-top:50px;
+color:#cbd5e1;
+font-size:0.95rem;
 }
 
 </style>
@@ -187,16 +199,21 @@ footer{
 
 <!-- Floating aesthetic icons -->
 
-<div class="floating" style="top:12%;left:10%;">💖</div>
-<div class="floating" style="top:22%;left:80%;">🎵</div>
-<div class="floating" style="top:35%;left:15%;">✨</div>
-<div class="floating" style="top:18%;left:60%;">🌙</div>
-<div class="floating" style="top:45%;left:85%;">💫</div>
-<div class="floating" style="top:60%;left:8%;">🎶</div>
+<div class="float" style="top:12%;left:8%;">🎸</div>
+<div class="float" style="top:20%;left:18%;">💙</div>
+<div class="float" style="top:16%;left:78%;">🎵</div>
+<div class="float" style="top:35%;left:88%;">⚽</div>
+<div class="float" style="top:50%;left:7%;">🏍️</div>
+<div class="float" style="top:62%;left:90%;">✨</div>
+<div class="float" style="top:42%;left:15%;">🎶</div>
+<div class="float" style="top:25%;left:60%;">💫</div>
 
 <div class="container">
 
-<h1>Why You Are A Successful And Amazing Human?</h1>
+<h1>
+Why You Are A Successful<br>
+And Amazing Human?
+</h1>
 
 <div class="subtitle">
 The reasons why you make the world better with your existence &lt;3
@@ -204,109 +221,130 @@ The reasons why you make the world better with your existence &lt;3
 
 <div class="buttons" id="buttons"></div>
 
-<div class="message" id="message">
-Click on one of the reasons ✨
+<div class="popup" id="popup">
+Click one of the reasons ✨
 </div>
 
 <footer>
-Made with admiration, stardust, and way too many feelings.
+Built with galaxies, progressive metal, football nights, bike rides, and admiration.
 </footer>
 
 </div>
 
 <div class="grass"></div>
 
-<div class="flower" style="left:5%;">🌸</div>
-<div class="flower" style="left:15%;">🌼</div>
-<div class="flower" style="left:25%;">🌷</div>
+<!-- Flowers -->
+
+<div class="flower" style="left:4%;">🌸</div>
+<div class="flower" style="left:10%;">🌼</div>
+<div class="flower" style="left:18%;">🌷</div>
+<div class="flower" style="left:28%;">🌻</div>
 <div class="flower" style="left:40%;">🌸</div>
-<div class="flower" style="left:55%;">🌻</div>
-<div class="flower" style="left:70%;">🌷</div>
-<div class="flower" style="left:85%;">🌼</div>
+<div class="flower" style="left:55%;">🌷</div>
+<div class="flower" style="left:68%;">🌼</div>
+<div class="flower" style="left:80%;">🌸</div>
+<div class="flower" style="left:92%;">🌻</div>
 
 <script>
 
 const reasons = [
 
 {
-title:"Why You'll Succeed",
-text:"You succeed because you never stop learning. You don’t just dream about things — you study them, build them, break them, fix them, and understand them deeply. The way you think, your discipline, your curiosity, and your ability to keep going even when things are hard… that’s the kind of mindset successful people are made of."
+title:"🎸 Why You're Different",
+text:"You somehow manage to be intelligent, emotionally aware, calm, passionate, funny, and deeply caring all at once. That combination is unbelievably rare."
 },
 
 {
-title:"Why You're Different",
-text:"You’re different because you care deeply while still being incredibly intelligent. Most people are either emotionally aware or technically skilled — but you somehow manage to be both."
+title:"⚽ Football Nights",
+text:"Watching football with you would probably become one of those little memories that stays forever. The excitement, the commentary, the chaos, the happiness when your team wins — it all feels warm with you."
 },
 
 {
-title:"Why I Admire You",
-text:"I admire the way your mind works. The passion you have for what you love, the effort you put into improving yourself, and the calm confidence you carry."
+title:"🏍️ Ride With You",
+text:"You feel like those late night bike rides under streetlights with music playing softly in the background — peaceful, exciting, and unforgettable at the same time."
 },
 
 {
-title:"Why You'll Build Big Things",
-text:"Because you don’t think small. Your creativity mixed with technical skill is powerful — and one day the things you build are going to impact a lot of people."
+title:"🎵 Your Music Taste",
+text:"The fact that you love progressive metal already says so much about your mind. Complex, emotional, creative, layered — just like you."
 },
 
 {
-title:"Why You're a Great Cybersecurity Engineer",
-text:"You naturally notice patterns, risks, loopholes, and possibilities that most people miss."
+title:"🎸 Misha Mansoor Energy",
+text:"You have that same experimental, passionate energy. The kind of person who keeps improving because creating things matters deeply to you."
 },
 
 {
-title:"Why You Matter",
-text:"You make people feel safe, understood, and valued. Your presence has this calm strength to it."
+title:"☀️ Bottle Of Sunshine",
+text:"You genuinely make spaces feel lighter. Even your presence changes the mood around people in the softest way."
 },
 
 {
-title:"Your Kindness",
-text:"Your kindness is soft but powerful. The world genuinely becomes lighter around people like you."
+title:"💙 Why I Admire You",
+text:"The way your mind works is beautiful. The way you think deeply, care deeply, and still keep moving forward quietly is inspiring."
 },
 
 {
-title:"Your Intelligence",
-text:"Your intelligence isn’t just about knowledge. It’s the way you observe things, solve problems, understand people, and keep learning constantly."
+title:"✨ Reasons To Live",
+text:"To hear new music. To ride under the night sky. To watch football. To build things. To laugh again. To fall in love with life again. To exist in a world where someone somewhere is grateful you exist."
 },
 
 {
-title:"Your Presence",
-text:"There’s something calming about your presence. Even simple conversations with you feel meaningful."
+title:"🌙 Your Presence",
+text:"There’s something calming about you. Even silence around you doesn’t feel empty — it feels safe."
 },
 
 {
-title:"Everything About You",
-text:"Your heart. Your mind. Your effort. Your dreams. Your kindness. Your strength. Every little piece of you adds up to someone unforgettable."
+title:"💫 Why You'll Succeed",
+text:"Because you genuinely care about learning and becoming better. People with minds like yours eventually build extraordinary things."
+},
+
+{
+title:"🎶 Your Soul",
+text:"You feel like a song that slowly becomes someone’s favorite after they truly listen carefully."
+},
+
+{
+title:"🌌 The Truth About You",
+text:"You are deeply lovable in ways you probably don’t even realize. The future version of you is going to be proud that you kept going."
 }
 
 ];
 
-const buttonsDiv = document.getElementById("buttons");
-const message = document.getElementById("message");
+const buttonsDiv=document.getElementById("buttons");
+const popup=document.getElementById("popup");
 
-reasons.forEach(reason => {
+reasons.forEach(reason=>{
 
-const button = document.createElement("div");
+const button=document.createElement("div");
 
-button.className = "reason";
+button.className="reason";
 
-button.innerText = reason.title;
+button.innerHTML=reason.title;
 
-button.onclick = () => {
-message.innerHTML = `
-<h2 style="margin-bottom:20px;color:#ffd6e7;">
+button.onclick=()=>{
+
+popup.innerHTML=`
+<h2 style="
+margin-bottom:20px;
+color:#93c5fd;
+font-size:1.7rem;
+">
 ${reason.title}
 </h2>
+
 ${reason.text}
 `;
+
 };
 
 buttonsDiv.appendChild(button);
 
 });
 
-/* Stars */
+/* Generate stars */
 
-for(let i=0;i<180;i++){
+for(let i=0;i<220;i++){
 
 let star=document.createElement("div");
 
